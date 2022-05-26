@@ -12,6 +12,28 @@
 	<body>
 		<div class="inputBox">
 			<table class="inputTable">
+				<tr class="inputFormat">
+                                        <td>形式</td>
+					<td>
+						<ul>
+						<li>日付:
+							<select>
+                                                        	<option>曜日なし「01月01日」</option>
+								<option>曜日有り「01月01日(月)」</option>
+								<option>スラッシュ「01/01」</option>
+								<option>スラッシュ曜日有り「01/01(月)」</option>
+							</select>
+						</li>
+						<li>時間帯:
+							<select>
+								<option>24時間制1「00:00〜23:59」</option>
+								<option>24時間制2「00時00分〜23時59分」</option>
+								<option>12時間制1「am00:00〜pm23:59」</option>
+								<option>12時間制2「午前0時0分〜午前11時59分」</option>
+							</select>
+						</li>
+						</ul>
+					</td>                                                                                  </tr>
 				<tr class="inputDate">
 					<td>日付</td>
 					<td><input id="targetDate" type="date"></td>
@@ -21,6 +43,10 @@
 					<td><input id="startTime" type="time">〜<input id="endTime" type="time"></td>
 				</tr>
 			</table>
+			<button id="addButton">追加</button>
+		</div>
+		<div class="outputBox">
+			<textarea id="output"></textarea>
 		</div>
 	</body>
 </html>
