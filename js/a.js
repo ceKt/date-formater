@@ -84,8 +84,7 @@ function updatedData(){
                 if(endTime[0]%12>=1){                                                                  outputText = outputText+"午前"+endTime[0]%12+"時"+endTime[1]+"分";
                 }
                 else{
-                        outputText = outputText+"午後"+endTime[0]+"時"+endTim
-e[1]+"分";
+                	 outputText = outputText+"午後"+endTime[0]+"時"+endTime[1]+"分";
                 }
         }
 	addTextElement.value=outputText;
