@@ -17,34 +17,35 @@
 					<td>
 						<ul>
 						<li>日付:
-							<select>
-                                                        	<option>曜日なし「01月01日」</option>
-								<option>曜日有り「01月01日(月)」</option>
-								<option>スラッシュ「01/01」</option>
-								<option>スラッシュ曜日有り「01/01(月)」</option>
+							<select id="formatDate" onchange="updateData()">
+                                                        	<option value="noneWeek">曜日なし「01月01日」</option>
+								<option value="all">曜日有り「01月01日(月)」</option>
+								<option value="slashNoneWeek">スラッシュ「01/01」</option>
+								<option value="slashAll">スラッシュ曜日有り「01/01(月)」</option>
 							</select>
 						</li>
 						<li>時間帯:
-							<select>
-								<option>24時間制1「00:00〜23:59」</option>
-								<option>24時間制2「00時00分〜23時59分」</option>
-								<option>12時間制1「am00:00〜pm23:59」</option>
-								<option>12時間制2「午前0時0分〜午前11時59分」</option>
+							<select id="formatTime" onchange="updateData()">
+								<option value="24hour1">24時間制1「00:00〜23:59」</option>
+								<option value="24hour2">24時間制2「00時00分〜23時59分」</option>
+								<option value="12hour1">12時間制1「am00:00〜pm23:59」</option>
+								<option value="12hour2">12時間制2「午前0時0分〜午前11時59分」</option>
 							</select>
 						</li>
 						</ul>
 					</td>                                                                                  </tr>
 				<tr class="inputDate">
 					<td>日付</td>
-					<td><input id="targetDate" type="date"></td>
+					<td><input id="targetDate" type="date" onchange="updateData()"></td>
 				</tr>
 				<tr class="inputTime">
 					<td>時間帯</td>
-					<td><input id="startTime" type="time">〜<input id="endTime" type="time"></td>
+					<td><input id="startTime" type="time" onchange="updateData()">〜<input id="endTime" type="time" onchange="updateData()"></td>
 				</tr>
 			</table>
-			<p class="addTextBox">出力結果：<input id="addText" type="text">></p>
-			<button id="addButton">追加</button>
+			<p class="addTextBox">出力結果：<input id="addText" type="text"></p>
+			<button id="addButton" onclick="addText()">追加</button>
+			
 		</div>
 		<div class="outputBox">
 			<textarea id="output"></textarea>
