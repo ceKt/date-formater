@@ -28,7 +28,7 @@ function updatedData(){
 	}
 	var targetDate = new Date(inputs.targetDate);
 	var month = ("0"+(date.getMonth()+1)).slice(-2);
-	var date = ("0"+date.getDate()).slice(-2);
+	var date = ("0"+targetDate.getDate()).slice(-2);
 	var days = ["日","月","火","水","木","金","土"];
 	var day = weeks[targetDate.getday()];
 	if(input.formatDate == "noneWeek"){
