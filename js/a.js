@@ -32,16 +32,16 @@ function updatedData(){
 	var days = ["日","月","火","水","木","金","土"];
 	var day = days[targetDate.getDay()];
 	if(inputs.formatDate == "noneWeek"){
-		outputText = month+"月"+date+"日";
+		outputText = month+"月"+date+"日 ";
 	}
 	else if(inputs.formatDate == "all"){
-		outputText = month+"月"+date+"日("+day+")";
+		outputText = month+"月"+date+"日("+day+") ";
 	}
 	else if(inputs.formatDate == "slashNoneWeek"){
-		outputText = month+"/"+date;
+		outputText = month+"/"+date+" ";
 	}
 	else if(inputs.formatDate == "slashAll"){
-		outputText = month+"/"+date+"("+day+")";
+		outputText = month+"/"+date+"("+day+") ";
 	}
 	var startTime = inputs.startTime.split(":");
 	
