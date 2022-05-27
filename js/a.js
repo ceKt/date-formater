@@ -30,17 +30,17 @@ function updatedData(){
 	var month = ("0"+(targetDate.getMonth()+1)).slice(-2);
 	var date = ("0"+targetDate.getDate()).slice(-2);
 	var days = ["日","月","火","水","木","金","土"];
-	var day = weeks[targetDate.getday()];
-	if(input.formatDate == "noneWeek"){
+	var day = days[targetDate.getDay()];
+	if(inputs.formatDate == "noneWeek"){
 		outputText = month+"月"+date+"日";
 	}
-	else if(input.formatDate == "all"){
+	else if(inputs.formatDate == "all"){
 		outputText = month+"月"+date+"日("+day+")";
 	}
-	else if(input.formatDate == "slashNoneWeek"){
+	else if(inputs.formatDate == "slashNoneWeek"){
 		outputText = month+"/"+date;
 	}
-	else if(input.formatDate == "slashAll"){
+	else if(inputs.formatDate == "slashAll"){
 		outputText = month+"/"+date+"("+day+")";
 	}
 	var startTime = inputs.startTime.split(":");
@@ -70,22 +70,21 @@ function updatedData(){
 
 	var endTime = inputs.endTime.split("-");
 	if(inputs.formatTime == "24hour1"){
-                outputText = outputText+startTime[0]+":"+startTime[1]+"";
+                outputText = outputText+endTime[0]+":"+endTime[1]+"";
         }
-        else if(inputs.formatTime == "24hour2"){                                                 outputText = outputText+startTime[0]+"時"+startTime[1]+"分";
+        else if(inputs.formatTime == "24hour2"){                                                 outputText = outputText+endTime[0]+"時"+endTime[1]+"分";
         }
         else if(inputs.formatTime == "12hour1"){
-                if(startTime[0]%12>=1){                                                                  outputText = outputText+startTime[0]%12+":"+startTime[1]+"am";
+                if(endTime[0]%12>=1){                                                                  outputText = outputText+endTime[0]%12+":"+endTime[1]+"am";
                 }
                 else{
-                        outputText = outputText+startTime[0]+":"+startTime[1]+"pm";                                                                                             }
+                        outputText = outputText+endTime[0]+":"+endTime[1]+"pm";                                                                                             }
         }
         else if(inputs.formatTime == "12hour2"){
-                if(startTime[0]%12>=1){                                                                  outputText = outputText+"午前"+startTime[0]%12+"時"+start
-Time[1]+"分";
+                if(endTime[0]%12>=1){                                                                  outputText = outputText+"午前"+endTime[0]%12+"時"+endTime[1]+"分";
                 }
                 else{
-                        outputText = outputText+"午後"+startTime[0]+"時"+startTim
+                        outputText = outputText+"午後"+endTime[0]+"時"+endTim
 e[1]+"分";
                 }
         }
