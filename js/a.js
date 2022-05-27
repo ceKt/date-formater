@@ -19,11 +19,11 @@ function updatedData(){
 	var outputText = "";
 	var addTextElement = document.getElementById("addText");
 	var inputs = getData();
-	if(inputs.formatDate = null || 
-		inputs.formatTime = null || 
-		inputs.targetDate = null || 
-		inputs.startTime = null || 
-		inputs.endTime = null){
+	if(inputs.formatDate == null || 
+		inputs.formatTime == null || 
+		inputs.targetDate == null || 
+		inputs.startTime == null || 
+		inputs.endTime == null){
 		return;
 	}
 	var targetDate = new Date(inputs.targetDate);
@@ -38,7 +38,7 @@ function updatedData(){
 		outputText = month+"月"+date+"日("+day+")";
 	}
 	else if(input.formatDate == "slashNoneWeek"){
-		outputText = month+"/"+date+;
+		outputText = month+"/"+date;
 	}
 	else if(input.formatDate == "slashAll"){
 		outputText = month+"/"+date+"("+day+")";
