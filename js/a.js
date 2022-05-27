@@ -94,6 +94,6 @@ e[1]+"分";
 
 function addText(){
 	var addTextElement = document.getElementById("addText");
-	document.getElementById("output").value+=addTextElement.value;
+	document.getElementById("output").value+=addTextElement.value+"\n";
 	return;
 }
