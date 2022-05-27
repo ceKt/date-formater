@@ -17,7 +17,7 @@
 					<td>
 						<ul>
 						<li>日付:
-							<select id="formatDate" onchange="updateData()">
+							<select id="formatDate" onchange="updatedData()">
                                                         	<option value="noneWeek">曜日なし「01月01日」</option>
 								<option value="all">曜日有り「01月01日(月)」</option>
 								<option value="slashNoneWeek">スラッシュ「01/01」</option>
@@ -25,7 +25,7 @@
 							</select>
 						</li>
 						<li>時間帯:
-							<select id="formatTime" onchange="updateData()">
+							<select id="formatTime" onchange="updatedData()">
 								<option value="24hour1">24時間制1「00:00〜23:59」</option>
 								<option value="24hour2">24時間制2「00時00分〜23時59分」</option>
 								<option value="12hour1">12時間制1「am00:00〜pm23:59」</option>
@@ -36,11 +36,11 @@
 					</td>                                                                                  </tr>
 				<tr class="inputDate">
 					<td>日付</td>
-					<td><input id="targetDate" type="date" onchange="updateData()"></td>
+					<td><input id="targetDate" type="date" onchange="updatedData()"></td>
 				</tr>
 				<tr class="inputTime">
 					<td>時間帯</td>
-					<td><input id="startTime" type="time" onchange="updateData()">〜<input id="endTime" type="time" onchange="updateData()"></td>
+					<td><input id="startTime" type="time" onchange="updatedData()">〜<input id="endTime" type="time" onchange="updatedData()"></td>
 				</tr>
 			</table>
 			<p class="addTextBox">出力結果：<input id="addText" type="text"></p>
