@@ -19,11 +19,11 @@ function updatedData(){
 	var outputText = "";
 	var addTextElement = document.getElementById("addText");
 	var inputs = getData();
-	if(inputs.formatDate == null || 
-		inputs.formatTime == null || 
-		inputs.targetDate == null || 
-		inputs.startTime == null || 
-		inputs.endTime == null){
+	if(inputs.formatDate || 
+		inputs.formatTime || 
+		inputs.targetDate || 
+		inputs.startTime || 
+		inputs.endTime){
 		return;
 	}
 	var targetDate = new Date(inputs.targetDate);
