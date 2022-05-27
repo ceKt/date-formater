@@ -68,9 +68,9 @@ function updatedData(){
                 }
 	}
 
-	var endTime = inputs.endTime.split("-");
+	var endTime = inputs.endTime.split(":");
 	if(inputs.formatTime == "24hour1"){
-                outputText = outputText+endTime[0]+":"+endTime[1]+"";
+                outputText = outputText+endTime[0]+":"+endTime[1];
         }
         else if(inputs.formatTime == "24hour2"){                                                 outputText = outputText+endTime[0]+"時"+endTime[1]+"分";
         }
